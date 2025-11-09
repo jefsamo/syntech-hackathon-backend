@@ -6,8 +6,8 @@ async function bootstrap() {
 
   app.enableCors({
     // origin: 'http://localhost:5173', // your Vite dev URL
-    // origin: 'https://syntech-hackathon.vercel.app', // your Vite dev URL
-    origin: '*', // your Vite dev URL
+    origin: 'https://syntech-hackathon.vercel.app', // your Vite dev URL
+    // origin: '*', // your Vite dev URL
     credentials: true,
   });
 
