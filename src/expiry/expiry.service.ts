@@ -65,8 +65,13 @@ If you cannot clearly see any expiry date, set both fields to null.
         raw: parsed.raw ?? null,
       };
     } catch (error) {
-      console.error('OpenAI vision error:', error);
-      throw new InternalServerErrorException('Failed to extract expiry');
+      console.error('OpenAI error:', {
+        message: error?.message,
+        status: error?.status,
+        data: error?.response?.data,
+        raw: error,
+      });
+      throw new InternalServerErrorException('OpenAI call failed');
     }
   }
 
