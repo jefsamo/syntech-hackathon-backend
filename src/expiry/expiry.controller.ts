@@ -14,6 +14,7 @@ export class ExpiryController {
   @Post('extract-expiry')
   @UseInterceptors(FileInterceptor('image'))
   async extractExpiry(@UploadedFile() file: Express.Multer.File) {
+    console.log(file);
     const result = await this.expiryService.extractExpiryFromImage(file);
     return result;
   }
