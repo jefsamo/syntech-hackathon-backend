@@ -4,6 +4,6 @@ import { ExpiryService } from './expiry.service';
 
 @Module({
   controllers: [ExpiryController],
-  providers: [ExpiryService]
+  providers: [ExpiryService],
 })
 export class ExpiryModule {}
